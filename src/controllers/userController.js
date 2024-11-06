@@ -6,6 +6,7 @@ const { findWithId } = require("../services/findWithId");
 const { successResponse, errorResponse } = require("./responseController");
 const { deleteImage } = require("../helper/deleteImage");
 
+// start register an user 
 const processRegister = async (req, res, next) => {
   try {
     // get all data from req body
@@ -38,10 +39,7 @@ const processRegister = async (req, res, next) => {
   }
 };
 
-//@desc: get all users without admin
-//route : api/users
-//privecy : public
-
+// get all users
 const getUsers = async (req, res, next) => {
   try {
     const search = req.query.search || "";
@@ -97,7 +95,8 @@ const getUserById = async (req, res, next) => {
     const id = req.params.id;
     // don't show password
     const options = { password: 0 };
-    const user = await findWithId(id, options);
+    // find user using findWithId service function
+    const user = await findWithId( User, id, options);
     return successResponse(res, {
       statusCode: 200,
       message: "User Were Returned Success fully",

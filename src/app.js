@@ -37,7 +37,7 @@ app.use((req,res, next)=>{
 })
 
 // server error handling middleware (if someone send wrong route)->all the errors
-app.use((err, req,res, next)=>{
+app.use((err, req, res, next)=>{
     return errorResponse(res, {
         statusCode: err.status,
         message: err.message,
