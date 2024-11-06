@@ -8,6 +8,7 @@ const { deleteImage } = require("../helper/deleteImage");
 
 const processRegister = async (req, res, next) => {
   try {
+    // get all data from req body
     const { name, email, phone, password, address } = req.body;
     
     // check user is exist

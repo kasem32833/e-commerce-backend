@@ -7,15 +7,6 @@ const rateLimit = require('express-rate-limit');
 const userRouter = require('./routers/userRouter');
 const seedRouter = require('./routers/seedRouter');
 const { errorResponse } = require('./controllers/responseController');
-
-
-
-
-
-
-
-
-
 const rateLimiter = rateLimit({
     windowMs: 1 * 60 * 1000, //1 minute,
     max: 50,
@@ -28,9 +19,7 @@ app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(xssClean());
-
 app.use('/api/users',userRouter);
-
 app.use('/api/seed', seedRouter);
 
 
