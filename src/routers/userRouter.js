@@ -1,5 +1,5 @@
 const express = require('express');
-const { processRegister ,getUsers,  getUser, deleteUserById      , getUserById } = require('../controllers/userController');
+const { processRegister ,getUsers,  deleteUserById      , getUserById } = require('../controllers/userController');
 const userRouter  =  express.Router();
 
 
