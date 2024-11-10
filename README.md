@@ -20,5 +20,9 @@
 # POST /api/users/processRegister-> Start register process
 # POST /api/users/verify-> user varification by receiving email then register
 
+############ API Endpoint ##################
+
+https://e-commerce-backend-72fw.onrender.com/users
+https://e-commerce-backend-72fw.onrender.com/api/users/6726703d0ba6b7c3409f5437
 
 

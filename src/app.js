@@ -27,8 +27,8 @@ app.use('/api/seed', seedRouter);
 
 
 
-app.get('/test', (req, res)=>{
-    res.send('Welcome from node server is ');
+app.get('/', (req, res)=>{
+    res.send('Welcome from node server  ');
 })
 
 // client handling middleware (if someone send wrong route)
